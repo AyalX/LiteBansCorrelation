@@ -10,6 +10,7 @@ The LiteBans Correlation IP Tool is a Python script specifically designed to wor
 2. Fetches detailed geographical and ISP information for logged IP addresses using `ip-api.com`.
 3. Identifies and highlights shared IP addresses and login dates across different users, aiding in pinpointing potential account sharing or unauthorized access incidents.
 4. Outputs comprehensive user activity reports with enriched IP information.
+5. Discord markdown supported.
 
 ### Dependencies
 
