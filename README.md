@@ -2,7 +2,7 @@
 
 ### Description
 
-The LiteBans Correlation Tool is a Python script specifically designed to work with LiteBans user logs. It helps administrators identify patterns and correlations in user login data based on IP addresses and login dates. By tracking shared IP addresses and dates across different users, it aims to facilitate investigations into suspicious activities or behaviors, potentially signaling shared or unauthorized account usage.
+The LiteBans Correlation IP Tool is a Python script specifically designed to work with LiteBans user logs. It helps administrators identify patterns and correlations in user login data based on IP addresses and login dates. By tracking shared IP addresses and dates across different users, it aims to facilitate investigations into suspicious activities or behaviors, potentially signaling shared or unauthorized account usage.
 
 ### Features
 
