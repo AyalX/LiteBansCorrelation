@@ -1,4 +1,4 @@
-## LiteBans Correlation Tool - GitHub README
+## LiteBans Correlation IP Tool
 
 ### Description
 
