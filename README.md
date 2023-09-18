@@ -43,7 +43,7 @@ pip install requests
 3. Run the script in your terminal:
 
    ```sh
-   python script_name.py
+   python "LiteBans Correlation Tool.py".py
    ```
 
 4. The script will output the analyzed data with detailed IP information and markers indicating shared IPs and dates.
