@@ -32,6 +32,7 @@ pip install requests
    Login history for user1
    [2023-09-18] Login: 123.45.67.89
    [2023-09-18] Login: 123.45.67.90
+   
    Login history for user2
    [2023-09-18] Login: 123.45.67.89
    ```
