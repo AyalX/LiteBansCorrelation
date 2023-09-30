@@ -39,22 +39,23 @@ for user, data in user_data.items():
     for i, (date, _) in enumerate(data):
         user_info[user][i]['date'] = date
 
-# Find shared IPs and dates
-shared_dates_ips = set()
-for user1_info in user_info.values():
-    for user2_info in user_info.values():
-        if user1_info is not user2_info:
-            shared_dates_ips.update((entry['date'], entry['ip']) for entry in user1_info if entry in user2_info)
-
-# Add formatting to shared IPs and dates
+# Get counts for dates and IPs
+date_users = {}
+ip_users = {}
 for user, info in user_info.items():
     for entry in info:
-        if (entry['date'], entry['ip']) in shared_dates_ips:
+        date_users.setdefault(entry['date'], set()).add(user)
+        ip_users.setdefault(entry['ip'], set()).add(user)
+
+# Mark dates and IPs
+for user, info in user_info.items():
+    for entry in info:
+        if len(date_users[entry['date']]) > 1:
             entry['date'] = f"__{entry['date']}__"
+        if len(ip_users[entry['ip']]) > 1:
             entry['ip'] = f"`{entry['ip']}`"
 
-# Print results
 for user, info in user_info.items():
-    print(f"**{user} Activity:**")
+    print(f"{user} Activity:")
     for entry in info:
         print("- Date: {date} | IP: {ip} | ISP: {isp} | Country: {country} | Region: {region} | City: {city}".format(**entry))
